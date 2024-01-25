@@ -1,10 +1,11 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes, Link } from "react-router-dom";
+import Features from "./Features"; // Ensure this is the correct path to your Features component
 import About from "./About"; // Import the About component
 import Home from "./Home"; // Import the Home component
 import Quote from "./Quote"; // Import the Quote component
 import "./App.css";
-import logo from "./images/Creative Warmth.png";
+import logo from "./images/Creative Warmth.png"; // Ensure this is the correct path to your logo
 
 function App() {
     return (
@@ -36,18 +37,17 @@ function App() {
                             <li>
                                 <Link to="/quote">Get a Free Quote</Link>
                             </li>
-                            {/* Add more navigation links as needed */}
                         </ul>
                     </nav>
                 </header>
 
+                {/* Include the Features component right here */}
+                <Features />
+
                 <Routes>
-                    <Route path="/" element={<Home />} />{" "}
-                    {/* Make sure you have a Home component */}
+                    <Route path="/" element={<Home />} />
                     <Route path="/about" element={<About />} />
-                    <Route path="/quote" element={<Quote />} />{" "}
-                    {/* Make sure you have a Quote component */}
-                    {/* Add more routes as needed */}
+                    <Route path="/quote" element={<Quote />} />
                 </Routes>
 
                 <footer>

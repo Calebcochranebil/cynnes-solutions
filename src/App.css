@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&display=swap");
+
 body {
     font-family: "Chakra Petch", sans-serif;
     margin: 0;
@@ -9,7 +11,7 @@ header {
     display: flex;
     justify-content: space-between; /* This will push the logo to the left and the nav to the right */
     align-items: center;
-    padding: 1em 30px; /* Changed from 1px to 1em to give more space */
+    padding: 0em 30px; /* Changed from 1px to 1em to give more space */
     background-color: #fff;
     border-bottom: 2px solid #eaeaea;
     position: relative; /* Added for absolute positioning of children */
@@ -72,7 +74,7 @@ nav ul li a:hover {
 .features {
     display: flex;
     justify-content: space-around;
-    align-items: center;
+    align-items: left;
     border-top: 2px solid #ff8210;
     border-bottom: 2px solid #ff8210;
 }
@@ -81,7 +83,7 @@ nav ul li a:hover {
     display: flex;
     align-items: center;
     flex-direction: row; /* Changed from column to row */
-    gap: 10px; /* Spacing between image and text */
+    gap: 1px; /* Spacing between image and text */
 }
 
 .feature-item img {
