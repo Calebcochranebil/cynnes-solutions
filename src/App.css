@@ -9,28 +9,26 @@ body {
 
 header {
     display: flex;
-    justify-content: space-between; /* This will push the logo to the left and the nav to the right */
+    justify-content: center; /* Center all items horizontally */
     align-items: center;
-    padding: 0em 30px; /* Changed from 1px to 1em to give more space */
+    padding: 0em 30px;
     background-color: #fff;
     border-bottom: 2px solid #eaeaea;
-    position: relative; /* Added for absolute positioning of children */
 }
 
-.logo-container {
-    display: flex;
-    align-items: center;
+.logo-container,
+nav {
+    flex: 1; /* Both logo and nav take up equal space */
 }
 
 .header-logo {
-    height: 150px; /* Adjust the size as needed */
-    margin-right: 20px; /* Create some space between the logo and the title */
+    height: 150px;
+    margin-right: 20px;
 }
 
 .header-text {
-    text-align: center; /* Center the text inside this div */
-    flex: 1; /* Added to allow text container to grow */
-    padding: 0 10%; /* Prevent text from overflowing */
+    text-align: center;
+    flex: 1; /* Let the text container grow as needed */
 }
 
 header h1 {
@@ -51,6 +49,7 @@ nav {
 }
 
 nav ul {
+    justify-content: flex-end;
     list-style-type: none;
     padding: 0;
     margin: 0; /* Reset margin to ensure alignment */
