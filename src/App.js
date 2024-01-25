@@ -4,6 +4,7 @@ import About from "./About"; // Import the About component
 import Home from "./Home"; // Import the Home component
 import Quote from "./Quote"; // Import the Quote component
 import "./App.css";
+import logo from "./images/Creative Warmth.png";
 
 function App() {
     return (
@@ -11,8 +12,11 @@ function App() {
             <div>
                 <header>
                     <div className="logo-container">
-                        {/* Uncomment and update the src if you're using the logo */}
-                        {/* <img src={logo} alt="Cynnes Solutions Logo" className="header-logo" /> */}
+                        <img
+                            src={logo}
+                            alt="Cynnes Solutions Logo"
+                            className="header-logo"
+                        />
                     </div>
                     <div className="header-text">
                         <h1>Welcome to Cynnes Solutions</h1>
