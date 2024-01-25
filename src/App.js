@@ -4,7 +4,6 @@ import About from "./About"; // Import the About component
 import Home from "./Home"; // Import the Home component
 import Quote from "./Quote"; // Import the Quote component
 import "./App.css";
-// import logo from "./i
 
 function App() {
     return (

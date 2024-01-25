@@ -1,38 +1,110 @@
-.App {
-  text-align: center;
+/* style.css */
+body {
+    font-family: "Chakra Petch", sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f9f9f9;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+header {
+    display: flex;
+    justify-content: space-between; /* This will push the logo to the left and the nav to the right */
+    align-items: center;
+    padding: 1px 30px;
+    background-color: #fff;
+    border-bottom: 2px solid #eaeaea;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.logo-container {
+    display: flex;
+    align-items: center;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.header-logo {
+    height: 150px; /* Adjust the size as needed */
+    margin-right: 20px; /* Create some space between the logo and the title */
 }
 
-.App-link {
-  color: #61dafb;
+.header-text {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center; /* Center the text inside this div */
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+header h1 {
+    margin: 0;
+    font-size: 2.2em;
+    color: #ff8210;
+    /* Remove position absolute and other related properties from here */
+}
+
+header p {
+    font-size: 1.2em; /* Adjust the font size as needed */
+    color: #0cc0df;
+    margin: 0;
+    padding-top: 0.5em; /* Add some space between the h1 and the paragraph */
+}
+
+nav {
+    /* No changes needed here, it will be pushed to the right by justify-content: space-between; */
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0; /* Reset margin to ensure alignment */
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-weight: bold;
+}
+
+nav ul li a:hover {
+    color: #666;
+}
+
+.features {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-top: 2px solid #ff8210;
+    border-bottom: 2px solid #ff8210;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    flex-direction: row; /* Changed from column to row */
+    gap: 10px; /* Spacing between image and text */
+}
+
+.feature-item img {
+    width: 50px; /* Adjust the size as needed */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.feature-item p {
+    color: #ff8210;
+    font-family: "Chakra Petch", sans-serif;
+    font-weight: 300;
+}
+
+/* Rest of your CSS */
+
+footer {
+    background-color: #333;
+    color: white;
+    padding: 1em;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
 }
