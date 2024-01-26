@@ -1,9 +1,10 @@
 import React from "react";
-import matIcon from "../images/mats sold.png"; // Update with correct path
-import warrantyIcon from "../images/warranty.png"; // Update with correct path
-import qualityIcon from "../images/quality.png"; // Update with correct path
 
-function Features() {
+import matIcon from "../images/mats sold.png";
+import qualityIcon from "../images/quality.png";
+import warrantyIcon from "../images/warranty.png";
+
+export default function Features() {
     return (
         <section className="features">
             <div className="feature-item">
@@ -21,5 +22,3 @@ function Features() {
         </section>
     );
 }
-
-export default Features;
