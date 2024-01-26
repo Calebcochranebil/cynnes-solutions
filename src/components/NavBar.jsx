@@ -8,16 +8,15 @@ export default function NavBar() {
     return (
         <nav className="w-full flex flex-row max-h-40 items-center justify-between">
             <Link className="" to="/">
-                
                 <img
                     src={logo}
                     alt="Cynnes Solutions Logo"
-                    className="h-36"
+                    className="h-36 ml-5"
                 />
             </Link>
 
             <div>
-                <ul className="flex flex-row">
+                <ul className="flex flex-row gap-8 mr-10">
                     <li>
                         <Link to="/">Home</Link>
                     </li>
@@ -30,6 +29,5 @@ export default function NavBar() {
                 </ul>
             </div>
         </nav>
-        
     );
 }
