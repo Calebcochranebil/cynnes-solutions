@@ -1,16 +1,16 @@
 import React from "react";
 
+import homeImage from "../images/ai-heatingmat.png";
+
 export default function Home() {
     return (
-        <div>
-            <h2>Home Page</h2>
-            <div className="header-text">
-                <h1>Welcome to Cynnes Solutions</h1>
-                <p>
+        <main className="h-[500px] bg-cover" style={{ backgroundImage: `url(${homeImage})`}}>
+                
+                <p className="text-2xl">
                     Snow Dissolves, Comfort Resolves <br />
                     With Every Mat We Lay
                 </p>
-            </div>
-        </div>
+            
+        </main>
     );
 }
