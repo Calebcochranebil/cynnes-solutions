@@ -1,12 +1,13 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Features from "./components/Features"; 
-import About from "./components/About"; 
-import Home from "./components/Home"; 
-import Quote from "./components/Quote"; 
-import "./App.css";
-import NavBar from "./components/NavBar";
 
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+
+import About from "./components/About";
+import Features from "./components/Features";
+import Home from "./components/Home";
+import NavBar from "./components/NavBar";
+import Quote from "./components/Quote";
+import "./App.css";
 
 function App() {
     return (

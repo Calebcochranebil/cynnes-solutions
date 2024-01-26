@@ -1,8 +1,6 @@
 import React from "react";
-// import "./About.css"; // If you have specific styles for About page
-// import other necessary assets
 
-function About() {
+export default function About() {
     return (
         <div>
             <h2>Our Story</h2>
@@ -11,5 +9,3 @@ function About() {
         </div>
     );
 }
-
-export default About;
