@@ -2,9 +2,23 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 
+import data from "../data/data";
 import homeImage from "../images/heatingmat-ai.png";
 
 export default function Home() {
+    const renderData = (item, index) =>
+        index % 2 === 0 ? (
+            <div key={item.id} className="flex flex-row">
+                <p>{item.text}</p>
+                <img src={item.image} alt={`Step ${index + 1}`} />
+            </div>
+        ) : (
+            <div key={item.id} className="flex flex-row">
+                <img src={item.image} alt={`Step ${index + 1}`} />
+                <p>{item.text}</p>
+            </div>
+        );
+
     return (
         <main
             className="h-[500px] bg-cover"
@@ -21,6 +35,12 @@ export default function Home() {
                 >
                     Get a Free Quote
                 </Link>
+            </div>
+            <div className="">
+                <div>
+                    <h1>How it all works</h1>
+                </div>
+                <div className="">{data.map(renderData)}</div>
             </div>
         </main>
     );
