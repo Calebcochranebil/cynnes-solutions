@@ -8,34 +8,32 @@ import Features from "./Features";
 export default function NavBar() {
     return (
         <>
-        <nav className="flex flex-row items-center p-4 ">
-            <Link to="/" className="flex-none">
-                <img
-                    src={logo}
-                    alt="Cynnes Solutions Logo"
-                    className="h-20 "
-                />
-            </Link>
+            <nav className="flex flex-row items-center p-4 ">
+                <Link to="/" className="flex-none">
+                    <img
+                        src={logo}
+                        alt="Cynnes Solutions Logo"
+                        className="h-20 sm:h-24 md:h-28 lg:h-32"
+                    />
+                </Link>
 
-            <div className="w-3">
-                <ul className="flex flex-row gap-4 text-md ">
-                    <li className="">
-                        <Link to="/">Home</Link>
-                    </li>
-                    <span>|</span>
-                    <li className="">
-                        <Link to="/quote">Quote</Link>
-                    </li>
-                    <span>|</span>
-                    <li className="">
-                        <Link to="/about">About</Link>
-                    </li>
-                    
-                    
-                </ul>
-            </div>
-        </nav>
-        <Features /> 
+                <div className="w-3">
+                    <ul className="flex flex-row gap-4 text-md">
+                        <li className="">
+                            <Link to="/">Home</Link>
+                        </li>
+                        <span>|</span>
+                        <li className="">
+                            <Link to="/quote">Quote</Link>
+                        </li>
+                        <span>|</span>
+                        <li className="">
+                            <Link to="/about">About</Link>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+            <Features />
         </>
     );
 }
