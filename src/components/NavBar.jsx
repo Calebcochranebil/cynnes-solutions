@@ -13,12 +13,12 @@ export default function NavBar() {
                     <img
                         src={logo}
                         alt="Cynnes Solutions Logo"
-                        className="h-20 sm:h-24 md:h-28 lg:h-32"
+                        className="h-20 sm:h-24  "
                     />
                 </Link>
 
                 <div className="w-3">
-                    <ul className="flex flex-row gap-4 text-md">
+                    <ul className="flex flex-row gap-4 text-md ">
                         <li className="">
                             <Link to="/">Home</Link>
                         </li>
