@@ -33,9 +33,9 @@ export default function Quote() {
                 TWO WAYS TO GET INITIAL QUOTE
             </h1>
 
-            <div className="flex flex-row items-start justify-center pt-8">
+            <div className="flex flex-col md:flex-row items-center pt-8">
                 {/* Left Side Content */}
-                <div className="flex flex-col items-center justify-center w-1/2">
+                <div className="flex flex-col items-center justify-center md:w-1/2">
                     {/* Image and text content */}
                     <a
                         href="https://www.google.com/maps/@41.1716415,-111.9641728,15z?entry=ttu"
@@ -61,8 +61,7 @@ export default function Quote() {
                     {/* Video content */}
                     <div className="mt-4 w-full flex justify-center">
                         {" "}
-                        {/* eslint-disable-next-line jsx-a11y/media-has-caption */}
-                        <video className="max-w-full h-64" controls>
+                        <video className="max-w-full h-64 rounded" controls>
                             <source src={quoteVideo} type="video/mp4" />
                         </video>
                     </div>
@@ -88,7 +87,7 @@ export default function Quote() {
                                 className="fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full flex items-center justify-center"
                                 id="my-modal"
                             >
-                                <div className="relative mx-auto p-6 border w-full max-w-lg shadow-lg rounded-lg bg-white">
+                                <div className="relative mx-auto p-6 border w-full max-w-lg shadow-lg rounded-lg bg-whitesmoke">
                                     <div className="bg-blue-500 text-white p-4 rounded-t-lg flex justify-between items-center">
                                         <h3 className="text-2xl font-semibold">
                                             Your Quote
@@ -98,7 +97,7 @@ export default function Quote() {
                                             onKeyPress={handleKeyPress}
                                             type="button"
                                             tabIndex={0}
-                                            className="text-white bg-transparent hover:bg-blue-600 hover:text-white rounded-full text-lg p-2 ml-auto inline-flex items-center focus:outline-none"
+                                            className="text-black bg-transparent hover:bg-blue-600 hover:text-white rounded-full text-lg p-2 ml-auto inline-flex items-center focus:outline-none"
                                         >
                                             &times;
                                         </button>
@@ -124,17 +123,15 @@ export default function Quote() {
 
                 {/* Vertical Divider */}
                 <div
-                    className="border-l-2 border-gray-300"
+                    className="hidden md:block border-l-2 border-gray-300  mx-2"
                     style={{ height: "calc(100vh - 4rem)" }} // Adjust height as needed
                 />
 
                 {/* Right Side Content */}
-                <div className="flex flex-col items-center justify-center w-1/2">
+                <div className="flex flex-col items-center justify-center md:w-1/2">
                     <p className="mt-4 text-center">
                         Right side content goes here.
                     </p>
-
-                    {/* Right side content */}
                 </div>
             </div>
         </div>
