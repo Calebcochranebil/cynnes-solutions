@@ -9,14 +9,32 @@ export default function Home() {
     // Render data in a flex row, alternating between text and image
     const renderData = (item, index) =>
         index % 2 === 0 ? (
-            <div key={item.id} className="flex flex-row justify-center  pt-4 gap-10 mx-6">
-                <p className="flex items-center p-2 m-2 rounded-md shadow-md">{item.text}</p>
-                <img src={item.image} alt={`Step ${index + 1}`} className="rounded-r-lg "/>
+            <div
+                key={item.id}
+                className="flex flex-row justify-center  pt-4 gap-10 mx-6"
+            >
+                <p className="flex items-center p-2 m-2 rounded-md shadow-md">
+                    {item.text}
+                </p>
+                <img
+                    src={item.image}
+                    alt={`Step ${index + 1}`}
+                    className="rounded-r-lg "
+                />
             </div>
         ) : (
-            <div key={item.id} className="flex flex-row justify-center pt-4 gap-10 mx-6">
-                <img src={item.image} alt={`Step ${index + 1}`} className="rounded-l-lg "/>
-                <p className="flex items-center p-2 m-2 rounded-md shadow-md">{item.text}</p>
+            <div
+                key={item.id}
+                className="flex flex-row justify-center pt-4 gap-10 mx-6"
+            >
+                <img
+                    src={item.image}
+                    alt={`Step ${index + 1}`}
+                    className="rounded-l-lg "
+                />
+                <p className="flex items-center p-2 m-2 rounded-md shadow-md">
+                    {item.text}
+                </p>
             </div>
         );
 
@@ -40,10 +58,7 @@ export default function Home() {
                 </div>
             </div>
             <div className="">
-                
-                    
                 <div className="">{data.map(renderData)}</div>
-               
             </div>
         </>
     );
