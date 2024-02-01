@@ -9,10 +9,9 @@ module.exports = {
             xl: "1440px",
         },
         colors: {
-            blue: "#1fb6ff",
+            blue: "#39469E",
             purple: "#7e5bef",
             pink: "#ff49db",
-
             green: "#13ce66",
             yellow: "#ffc82c",
             "gray-dark": "#273444",
