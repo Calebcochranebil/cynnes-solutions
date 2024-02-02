@@ -123,7 +123,7 @@ export default function Quote() {
 
                 {/* Vertical Divider */}
                 <div
-                    className="hidden md:block border-l-2 border-gray-300  mx-2"
+                    className="hidden md:block border-l-2 border-orange  mx-2"
                     style={{ height: "calc(100vh - 4rem)" }} // Adjust height as needed
                 />
 
