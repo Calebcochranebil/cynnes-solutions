@@ -1,16 +1,9 @@
 import React from "react";
 
-import foundersImg from "../images/founders.jpg";
-
 export default function About() {
     return (
         <div className="p-6 pb-10 max-w-2xl mx-auto">
-            <h2 className="text-2xl font-semibold text-gray-800">Our Story</h2>
-            <img
-                src={foundersImg}
-                alt="Cochrane Brothers"
-                className="my-4 w-full object-cover rounded-lg shadow-md"
-            />
+            <h2 className="text-2xl font-semibold text-gray-800">About Us</h2>
             <p className="text-gray-700 text-lg">
                 The journey of our invention began with a simple observation
                 &ndash; the strenuous and time-consuming task of snow removal

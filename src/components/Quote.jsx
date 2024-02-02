@@ -104,11 +104,11 @@ export default function Quote() {
                                     </div>
                                     <div className="p-4">
                                         <p className="text-lg text-gray-700 mb-4">
-                                            Please note that this estimate is
-                                            within 10% of your final quote. Our
-                                            team member will provide you with an
-                                            accurate assessment and final quote
-                                            upon completion of an on-site
+                                            Please be aware that the provided
+                                            estimate is approximately within 10%
+                                            of your final quote. A precise quote
+                                            and assessment will be given by our
+                                            team after completing the on-site
                                             measurement.
                                         </p>
                                         <p className="text-xl font-semibold text-gray-800">
