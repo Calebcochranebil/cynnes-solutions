@@ -12,7 +12,7 @@ import "./App.css";
 function App() {
     return (
         <Router>
-            <div className="flex flex-col h-screen w-screen bg-whitesmoke">
+            <div className="flex flex-col h-screen bg-whitesmoke">
                 <NavBar />
                 <Routes>
                     <Route path="/" element={<Home />} />

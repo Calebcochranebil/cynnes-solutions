@@ -10,38 +10,6 @@ body {
     box-sizing: border-box;
 }
 
-header {
-    display: flex;
-    justify-content: center; /* Center all items horizontally */
-    align-items: center;
-    padding: 0em 30px;
-    background-color: #fff;
-    border-bottom: 2px solid #eaeaea;
-}
-
-.header-logo {
-    height: 150px;
-    margin-right: 20px;
-}
-
-.header-text {
-    text-align: center;
-    flex: 1; /* Let the text container grow as needed */
-}
-
-header h1 {
-    margin: 0;
-    font-size: 2.2em;
-    color: #ff8210;
-}
-
-header p {
-    font-size: 1.2em; /* Adjust the font size as needed */
-    color: #0cc0df;
-    margin: 0;
-    padding-top: 0.5em; /* Add some space between the h1 and the paragraph */
-}
-
 .features {
     display: flex;
     justify-content: space-around;
@@ -70,7 +38,7 @@ header p {
 
 /* Rest of your CSS */
 
-footer {
+/* footer {
     background-color: #333;
     color: white;
     padding: 1em;
@@ -79,3 +47,4 @@ footer {
     bottom: 0;
     width: 100%;
 }
+*/
