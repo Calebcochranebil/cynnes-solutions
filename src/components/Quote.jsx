@@ -81,7 +81,7 @@ export default function Quote() {
                             onClick={calculateQuote}
                             className="ml-2 bg-blue-500 text-white p-2"
                         >
-                            Calculate
+                            Get Quote
                         </button>
                         {isModalOpen && (
                             <div
