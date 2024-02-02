@@ -11,28 +11,28 @@ export default function Home() {
         index % 2 === 0 ? (
             <div
                 key={item.id}
-                className="flex flex-row justify-center  pt-4 gap-10 mx-6"
+                className="flex flex-row justify-center pt-10 gap-5 mx-6 sm:gap-10 md:gap-20 lg:gap-40 xl:gap-60"
             >
-                <p className="flex items-center p-2 m-2 rounded-md shadow-md">
+                <p className="flex items-center p-2 m-2 rounded-lg shadow-xl w-[700px]">
                     {item.text}
                 </p>
                 <img
                     src={item.image}
                     alt={`Step ${index + 1}`}
-                    className="rounded-r-lg "
+                    className="object-cover rounded-r-lg w-40 min-h-56 lg:w-60 xl:w-80 lg:h-60 xl:h-80"
                 />
             </div>
         ) : (
             <div
                 key={item.id}
-                className="flex flex-row justify-center pt-4 gap-10 mx-6"
+                className="flex flex-row justify-center pt-10 gap-5 mx-6 sm:gap-10 md:gap-20 lg:gap-40 xl:gap-60"
             >
                 <img
                     src={item.image}
                     alt={`Step ${index + 1}`}
-                    className="rounded-l-lg "
+                    className="object-cover rounded-l-lg w-40 min-h-56 lg:w-60 xl:w-80 lg:h-60 xl:h-80"
                 />
-                <p className="flex items-center p-2 m-2 rounded-md shadow-md">
+                <p className="flex items-center p-2 m-2 rounded-lg shadow-xl w-[700px]">
                     {item.text}
                 </p>
             </div>
@@ -41,11 +41,11 @@ export default function Home() {
     return (
         <>
             <div
-                className="min-h-[500px] bg-cover"
+                className="min-h-[750px] bg-cover"
                 style={{ backgroundImage: `url(${homeImage})` }}
             >
-                <div className="flex flex-col">
-                    <p className="text-xl  text-[#ff8210] pt-32 pl-6 font-semibold sm:text-2xl md:text-4xl">
+                <div className="flex flex-col mt-32">
+                    <p className="  text-[#ff8210] pt-32 pl-6 font-semibold text-2xl md:text-4xl lg:text-6xl">
                         Snow Dissolves, Comfort Resolves <br />
                         With Every Mat We Lay
                     </p>

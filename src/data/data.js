@@ -1,24 +1,25 @@
+import callCenterRep from "../images/call-center-rep.jpg";
+import deliveryMan from "../images/delivery-guy.png";
+import freeQuote from "../images/free-quote (1).png";
+
+
 const data = [
     {
         id: 1,
-        image: "https://i.imgur.com/1uSYr72.jpg",
+        image: freeQuote,
         text: "I'm a software engineer and I love to code!",
     },
     {
         id: 2,
-        image: "https://i.imgur.com/1uSYr72.jpg",
+        image: callCenterRep,
         text: "I'm a software engineer and I love to code!",
     },
     {
         id: 3,
-        image: "https://i.imgur.com/1uSYr72.jpg",
+        image: deliveryMan,
         text: "I'm a software engineer and I love to code!",
     },
-    {
-        id: 4,
-        image: "https://i.imgur.com/1uSYr72.jpg",
-        text: "I'm a software engineer and I love to code!",
-    },
+    
 ];
 
 export default data;
