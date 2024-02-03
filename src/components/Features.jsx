@@ -1,6 +1,5 @@
 import React from "react";
 
-// Correctly ordered and grouped imports without empty lines
 import instagramIcon from "../images/instagram.png";
 import linkedinIcon from "../images/linkedin.png";
 import matIcon from "../images/mats sold.png";
@@ -11,11 +10,11 @@ import warrantyIcon from "../images/warranty.png";
 
 export default function Features() {
     return (
-        <section className="flex flex-col justify-center items-center border-t-2 border-b-2 border-orange h-screen">
-            <div className="flex justify-center items-center space-x-10">
+        <section className="hidden feature:block mt-[128px] border-t-2 border-b-2 border-orange w-full">
+            <div className="flex flex-row justify-center items-center p-2">
                 {/* Left Content */}
-                <div className="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-16">
-                    <div className="feature-item text-center">
+                <div className="flex flex-1 flex-row justify-center gap-10">
+                    <div className="text-center">
                         <img
                             src={matIcon}
                             alt="Icon 1"
@@ -23,7 +22,7 @@ export default function Features() {
                         />
                         <p>1+ Snow-Free Driveways</p>
                     </div>
-                    <div className="feature-item text-center">
+                    <div className="text-center">
                         <img
                             src={qualityIcon}
                             alt="Icon 3"
@@ -34,33 +33,33 @@ export default function Features() {
                 </div>
 
                 {/* Social Media Links */}
-                <div className="social-media-links flex justify-center items-center space-x-8">
-                    <a href="your-instagram-link" className="feature-item">
+                <div className="flex flex-2 flex-row justify-center">
+                    <a href="your-instagram-link" className="">
                         <img
                             src={instagramIcon}
                             alt="Instagram"
-                            className="w-4 h-4"
+                            className="w-16 h-16"
                         />
                     </a>
-                    <a href="your-tiktok-link" className="feature-item">
+                    <a href="your-tiktok-link" className="">
                         <img
                             src={tiktokIcon}
                             alt="TikTok"
-                            className="w-4 h-4"
+                            className="w-16 h-16"
                         />
                     </a>
-                    <a href="your-linkedin-link" className="feature-item">
+                    <a href="your-linkedin-link" className="">
                         <img
                             src={linkedinIcon}
                             alt="LinkedIn"
-                            className="w-4 h-4"
+                            className="w-16 h-16"
                         />
                     </a>
                 </div>
 
                 {/* Right Content */}
-                <div className="flex flex-col md:flex-row justify-center items-center space-x-0 md:space-x-16">
-                    <div className="feature-item text-center">
+                <div className="flex flex-1 flex-row justify-center gap-4">
+                    <div className="text-center">
                         <img
                             src={warrantyIcon}
                             alt="Icon 2"
@@ -68,7 +67,7 @@ export default function Features() {
                         />
                         <p>5 Year Warranty</p>
                     </div>
-                    <div className="feature-item text-center">
+                    <div className="text-center">
                         <img
                             src={returnIcon}
                             alt="Icon 3"

@@ -8,12 +8,12 @@ import Features from "./Features";
 export default function NavBar() {
     return (
         <>
-            <nav className="flex flex-row items-center p-4 justify-between">
+            <nav className="bg-whitesmoke fixed top-0 left-0 right-0 z-10 bg-white p-4 flex flex-row items-center justify-between">
                 <Link to="/" className="flex-none">
                     <img
                         src={logo}
                         alt="Cynnes Solutions Logo"
-                        className="h-20 sm:h-24 md:pl-6 lg:pl-8 "
+                        className="h-24 md:pl-6 lg:pl-8 "
                     />
                 </Link>
 
