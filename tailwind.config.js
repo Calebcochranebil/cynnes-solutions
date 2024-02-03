@@ -7,6 +7,7 @@ module.exports = {
             md: "768px",
             lg: "976px",
             xl: "1440px",
+            feature: "675px"
         },
         colors: {
             blue: "#39469E",
