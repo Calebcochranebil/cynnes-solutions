@@ -13,7 +13,7 @@ export default function Features() {
         <section className="hidden feature:block mt-[128px] border-t-2 border-b-2 border-orange w-full">
             <div className="flex flex-row justify-center items-center p-2">
                 {/* Left Content */}
-                <div className="flex flex-1 flex-row justify-center gap-10">
+                <div className="flex flex-1 flex-row justify-evenly gap-10">
                     <div className="text-center">
                         <img
                             src={matIcon}
@@ -58,7 +58,7 @@ export default function Features() {
                 </div>
 
                 {/* Right Content */}
-                <div className="flex flex-1 flex-row justify-center gap-4">
+                <div className="flex flex-1 flex-row justify-evenly gap-4">
                     <div className="text-center">
                         <img
                             src={warrantyIcon}
