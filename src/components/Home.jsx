@@ -45,7 +45,7 @@ export default function Home() {
                 style={{ backgroundImage: `url(${homeImage})` }}
             >
                 <div className="flex flex-col mt-32">
-                    <p className="  text-[#ff8210] pt-32 pl-6 font-semibold text-2xl md:text-4xl lg:text-6xl">
+                    <p className="text-[#ff8210] pt-32 pl-6 font-semibold text-2xl md:text-4xl lg:text-6xl">
                         Snow Dissolves, Comfort Resolves <br />
                         With Every Mat We Lay
                     </p>
@@ -57,6 +57,9 @@ export default function Home() {
                     </Link>
                 </div>
             </div>
+            <h1 className="text-center font-bold pt-14 pl-6 text-1xl md:text-2xl lg:text-4xl">
+                4 STEPS TO A SNOW FREE DRIVEWAY{" "}
+            </h1>
             <div className="">
                 <div className="">{data.map(renderData)}</div>
             </div>
