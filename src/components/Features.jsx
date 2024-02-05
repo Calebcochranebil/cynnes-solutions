@@ -73,7 +73,7 @@ export default function Features() {
                             alt="Icon 3"
                             className="w-12 h-12 mx-auto"
                         />
-                        <p>Repeat Customers Discount</p>
+                        <p>Repeat Customer Discount</p>
                     </div>
                 </div>
             </div>
