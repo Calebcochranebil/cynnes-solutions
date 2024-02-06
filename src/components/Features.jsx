@@ -34,7 +34,10 @@ export default function Features() {
 
                 {/* Social Media Links */}
                 <div className="flex flex-2 flex-row justify-center">
-                    <a href="your-instagram-link" className="">
+                    <a
+                        href="https://www.instagram.com/cynnessolutions/"
+                        className=""
+                    >
                         <img
                             src={instagramIcon}
                             alt="Instagram"
@@ -48,7 +51,10 @@ export default function Features() {
                             className="w-16 h-16"
                         />
                     </a>
-                    <a href="your-linkedin-link" className="">
+                    <a
+                        href="https://www.linkedin.com/company/cynnes-solutions"
+                        className=""
+                    >
                         <img
                             src={linkedinIcon}
                             alt="LinkedIn"
