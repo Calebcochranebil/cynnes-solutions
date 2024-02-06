@@ -50,6 +50,7 @@ export default function About() {
             ref={(el) => {
                 textRef.current[pIndex] = el;
             }}
+            className="text-base sm:text-lg" // Adjust text size based on screen size
         >
             {text.split(" ").map((word, wIndex) => {
                 const key = `p-${pIndex}-w-${wIndex}-${word.replace(/[^a-zA-Z0-9]/g, "")}`;
@@ -63,8 +64,10 @@ export default function About() {
     );
 
     return (
-        <div className="p-6 pb-10 max-w-2xl mx-auto space-y-4">
-            <h2 className="text-2xl font-semibold text-gray-800">About Us</h2>
+        <div className="pt-16 sm:pt-20 p-4 sm:p-6 pb-8 sm:pb-10 max-w-xl sm:max-w-2xl mx-auto space-y-2 sm:space-y-4">
+            <h2 className="text-xl sm:text-2xl font-semibold text-gray-800">
+                About Us
+            </h2>
             {paragraphs.map((paragraph, index) =>
                 wrapWordsInSpans(paragraph, index),
             )}
