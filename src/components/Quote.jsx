@@ -20,6 +20,8 @@ export default function Quote() {
     const [state, setState] = useState("");
     const [zip, setZip] = useState("");
 
+    const [setFeedbackMessage] = useState("");
+
     const calculateQuote = () => {
         const calculatedResult = squareFootage * 3.25;
         setResult(calculatedResult);
@@ -36,16 +38,45 @@ export default function Quote() {
         }
     };
 
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        // Reset all form fields
-        setName("");
-        setEmail("");
-        setMessage("");
-        setStreet("");
-        setCity("");
-        setState("");
-        setZip("");
+    const handleSubmit = async (e) => {
+        e.preventDefault();
+        const formData = {
+            name,
+            email,
+            message,
+            address: {
+                street,
+                city,
+                state,
+                zip,
+            },
+        };
+
+        try {
+            const response = await fetch("https://api.web3forms.com/submit", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify({
+                    access_key: "ffa7a7e2-1dc5-4ae2-b371-60f7ca83d8a0",
+                    ...formData,
+                }),
+            });
+            await response.json(); // Adjusted to no longer assign to an unused variable
+            if (response.ok) {
+                setFeedbackMessage("Form submitted successfully.");
+                setIsModalOpen(false); // Close modal on success
+            } else {
+                setFeedbackMessage(
+                    "An error occurred while submitting the form. Please try again.",
+                );
+            }
+        } catch (error) {
+            setFeedbackMessage(
+                "An error occurred while submitting the form. Please check your internet connection and try again.",
+            );
+        }
     };
 
     return (
@@ -156,7 +187,7 @@ export default function Quote() {
                         onSubmit={handleSubmit}
                         action="https://api.web3forms.com/submit"
                         method="POST"
-                        className="w-full max-w-lg"
+                        className="w-full max-w-lg bg-white rounded-lg shadow-md p-6"
                     >
                         <input
                             type="hidden"
@@ -211,8 +242,10 @@ export default function Quote() {
                                 required
                             />
                         </div>
-                        <div>
-                            <h3 className="text-lg font-semibold">Address</h3>
+                        <div className="mb-4">
+                            <h3 className="text-lg font-semibold text-gray-900">
+                                Address
+                            </h3>
                             <div className="space-y-2">
                                 <div>
                                     <label
@@ -293,7 +326,7 @@ export default function Quote() {
 
                         <button
                             type="submit"
-                            className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                            className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 mt-4"
                         >
                             Send Message
                         </button>
