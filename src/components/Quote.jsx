@@ -1,3 +1,5 @@
+/* eslint-disable jsx-a11y/label-has-associated-control */
+
 import React, { useState } from "react";
 
 import quoteImage from "../images/750 Sqft.png";
@@ -7,6 +9,16 @@ export default function Quote() {
     const [squareFootage, setSquareFootage] = useState("");
     const [result, setResult] = useState(null);
     const [isModalOpen, setIsModalOpen] = useState(false);
+
+    // Contact form states
+    const [name, setName] = useState("");
+    const [email, setEmail] = useState("");
+    const [message, setMessage] = useState("");
+    // Address form states
+    const [street, setStreet] = useState("");
+    const [city, setCity] = useState("");
+    const [state, setState] = useState("");
+    const [zip, setZip] = useState("");
 
     const calculateQuote = () => {
         const calculatedResult = squareFootage * 3.25;
@@ -18,12 +30,22 @@ export default function Quote() {
         setIsModalOpen(false);
     };
 
-    // Function to handle keyboard interaction for closing the modal
     const handleKeyPress = (event) => {
         if (event.key === "Enter" || event.key === " ") {
-            // Close modal on Enter or Space key press
             closeModal();
         }
+    };
+
+    const handleSubmit = (event) => {
+        event.preventDefault();
+        // Reset all form fields
+        setName("");
+        setEmail("");
+        setMessage("");
+        setStreet("");
+        setCity("");
+        setState("");
+        setZip("");
     };
 
     return (
@@ -128,10 +150,154 @@ export default function Quote() {
                 />
 
                 {/* Right Side Content */}
-                <div className="flex flex-col items-center justify-center md:w-1/2">
-                    <p className="mt-4 text-center">
-                        Right side content goes here.
-                    </p>
+                <div className="flex flex-col items-center justify-center md:w-1/2 space-y-6">
+                    <h1 className="text-xl font-semibold">Contact Us</h1>
+                    <form
+                        onSubmit={handleSubmit}
+                        action="https://api.web3forms.com/submit"
+                        method="POST"
+                        className="w-full max-w-lg"
+                    >
+                        <input
+                            type="hidden"
+                            name="access_key"
+                            value="ffa7a7e2-1dc5-4ae2-b371-60f7ca83d8a0"
+                        />
+                        <div className="mb-4">
+                            <label
+                                htmlFor="name"
+                                className="block text-sm font-medium text-gray-700"
+                            >
+                                Name
+                            </label>
+                            <input
+                                type="text"
+                                id="name"
+                                value={name}
+                                onChange={(e) => setName(e.target.value)}
+                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                htmlFor="email"
+                                className="block text-sm font-medium text-gray-700"
+                            >
+                                Email
+                            </label>
+                            <input
+                                type="email"
+                                id="email"
+                                value={email}
+                                onChange={(e) => setEmail(e.target.value)}
+                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                required
+                            />
+                        </div>
+                        <div className="mb-4">
+                            <label
+                                htmlFor="message"
+                                className="block text-sm font-medium text-gray-700"
+                            >
+                                Message
+                            </label>
+                            <textarea
+                                id="message"
+                                rows="4"
+                                value={message}
+                                onChange={(e) => setMessage(e.target.value)}
+                                className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                required
+                            />
+                        </div>
+                        <div>
+                            <h3 className="text-lg font-semibold">Address</h3>
+                            <div className="space-y-2">
+                                <div>
+                                    <label
+                                        htmlFor="street"
+                                        className="block text-sm font-medium text-gray-700"
+                                    >
+                                        Street
+                                    </label>
+                                    <input
+                                        type="text"
+                                        id="street"
+                                        value={street}
+                                        onChange={(e) =>
+                                            setStreet(e.target.value)
+                                        }
+                                        className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                        required
+                                    />
+                                </div>
+                                <div className="grid grid-cols-3 gap-4">
+                                    <div>
+                                        <label
+                                            htmlFor="city"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            City
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="city"
+                                            value={city}
+                                            onChange={(e) =>
+                                                setCity(e.target.value)
+                                            }
+                                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                            required
+                                        />
+                                    </div>
+                                    <div>
+                                        <label
+                                            htmlFor="state"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            State
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="state"
+                                            value={state}
+                                            onChange={(e) =>
+                                                setState(e.target.value)
+                                            }
+                                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                            required
+                                        />
+                                    </div>
+                                    <div>
+                                        <label
+                                            htmlFor="zip"
+                                            className="block text-sm font-medium text-gray-700"
+                                        >
+                                            ZIP
+                                        </label>
+                                        <input
+                                            type="text"
+                                            id="zip"
+                                            value={zip}
+                                            onChange={(e) =>
+                                                setZip(e.target.value)
+                                            }
+                                            className="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:outline-none focus:ring-indigo-500 focus:border-indigo-500 sm:text-sm"
+                                            required
+                                        />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <button
+                            type="submit"
+                            className="inline-flex justify-center py-2 px-4 border border-transparent shadow-sm text-sm font-medium rounded-md text-white bg-blue-500 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500"
+                        >
+                            Send Message
+                        </button>
+                    </form>
                 </div>
             </div>
         </div>
