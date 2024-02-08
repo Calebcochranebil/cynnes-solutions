@@ -88,7 +88,10 @@ export default function Quote() {
 
             <div className="flex flex-col md:flex-row items-center pt-8">
                 {/* Left Side Content */}
-                <div className="flex flex-col items-center justify-center md:w-1/2">
+                <div className="flex flex-col items-center justify-center md:w-1/2 flex-grow">
+                    <h2 className="text-xl font-bold my-4 text-center">
+                        DO IT YOURSELF
+                    </h2>
                     {/* Image and text content */}
                     <a
                         href="https://www.google.com/maps/@41.1716415,-111.9641728,15z?entry=ttu"
@@ -120,7 +123,7 @@ export default function Quote() {
                     </div>
 
                     {/* Square Footage Input Form */}
-                    <div className="mt-4" style={{ marginBottom: "150px" }}>
+                    <div className="mt-4">
                         <input
                             type="number"
                             value={squareFootage}
@@ -181,7 +184,10 @@ export default function Quote() {
                 />
 
                 {/* Right Side Content */}
-                <div className="flex flex-col items-center justify-center md:w-1/2 space-y-6">
+                <div className="flex flex-col items-center justify-center md:w-1/2 space-y-2 flex-grow">
+                    <h2 className="text-xl font-bold my-4 text-center">
+                        WE GOT YOU{" "}
+                    </h2>
                     <h1 className="text-xl font-semibold">Contact Us</h1>
                     <form
                         onSubmit={handleSubmit}

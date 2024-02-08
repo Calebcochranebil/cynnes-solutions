@@ -1,5 +1,8 @@
 import React from "react";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+
 import instagramIcon from "../images/instagram.png";
 import linkedinIcon from "../images/linkedin.png";
 import matIcon from "../images/mats sold.png";
@@ -25,7 +28,7 @@ export default function Features() {
                     <div className="text-center">
                         <img
                             src={qualityIcon}
-                            alt="Icon 3"
+                            alt="Icon 2"
                             className="w-12 h-12 mx-auto"
                         />
                         <p>Quality Custom Mats</p>
@@ -68,7 +71,7 @@ export default function Features() {
                     <div className="text-center">
                         <img
                             src={warrantyIcon}
-                            alt="Icon 2"
+                            alt="Icon 3"
                             className="w-12 h-12 mx-auto"
                         />
                         <p>5 Year Warranty</p>
@@ -76,12 +79,71 @@ export default function Features() {
                     <div className="text-center">
                         <img
                             src={returnIcon}
-                            alt="Icon 3"
+                            alt="Icon 4"
                             className="w-12 h-12 mx-auto"
                         />
                         <p>Repeat Customer Discount</p>
                     </div>
                 </div>
+            </div>
+
+            {/* Slider content for smaller screens */}
+            <div className="md:hidden">
+                <Swiper spaceBetween={50} slidesPerView={1}>
+                    <SwiperSlide>
+                        <img
+                            src={matIcon}
+                            alt="Icon 1"
+                            className="w-12 h-12 mx-auto"
+                        />
+                        <p>1+ Snow-Free Driveways</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={qualityIcon}
+                            alt="Icon 2"
+                            className="w-12 h-12 mx-auto"
+                        />
+                        <p>Quality Custom Mats</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={instagramIcon}
+                            alt="Instagram"
+                            className="w-16 h-16 mx-auto"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={tiktokIcon}
+                            alt="TikTok"
+                            className="w-16 h-16 mx-auto"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={linkedinIcon}
+                            alt="LinkedIn"
+                            className="w-16 h-16 mx-auto"
+                        />
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={warrantyIcon}
+                            alt="Icon 3"
+                            className="w-12 h-12 mx-auto"
+                        />
+                        <p>5 Year Warranty</p>
+                    </SwiperSlide>
+                    <SwiperSlide>
+                        <img
+                            src={returnIcon}
+                            alt="Icon 4"
+                            className="w-12 h-12 mx-auto"
+                        />
+                        <p>Repeat Customer Discount</p>
+                    </SwiperSlide>
+                </Swiper>
             </div>
         </section>
     );
