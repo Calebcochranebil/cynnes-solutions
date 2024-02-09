@@ -6,42 +6,26 @@ import data from "../data/data";
 import homeImage from "../images/heatingmat-ai.png";
 
 export default function Home() {
-    // Render data in a flex row, alternating between text and image
-    const renderData = (item, index) =>
-        index % 2 === 0 ? (
-            <div
-                key={item.id}
-                className="flex flex-row justify-center pt-10 gap-5 mx-6 sm:gap-10 md:gap-20 lg:gap-40 xl:gap-60"
-            >
-                <p className="flex items-center p-2 m-2 rounded-lg shadow-xl w-[700px]">
-                    {item.text}
-                </p>
-                <img
-                    src={item.image}
-                    alt={`Step ${index + 1}`}
-                    className="object-cover rounded-r-lg w-40 min-h-56 lg:w-60 xl:w-80 lg:h-60 xl:h-80"
-                />
-            </div>
-        ) : (
-            <div
-                key={item.id}
-                className="flex flex-row justify-center pt-10 gap-5 mx-6 sm:gap-10 md:gap-20 lg:gap-40 xl:gap-60"
-            >
-                <img
-                    src={item.image}
-                    alt={`Step ${index + 1}`}
-                    className="object-cover rounded-l-lg w-40 min-h-56 lg:w-60 xl:w-80 lg:h-60 xl:h-80"
-                />
-                <p className="flex items-center p-2 m-2 rounded-lg shadow-xl w-[700px]">
-                    {item.text}
-                </p>
-            </div>
-        );
+    const renderData = (item, index) => (
+        <div
+            key={item.id}
+            className={`flex flex-col sm:flex-row justify-center items-center pt-10 gap-5 mx-4 sm:mx-6 ${index % 2 === 0 ? "" : "sm:flex-row-reverse"}`}
+        >
+            <p className="p-2 m-2 rounded-lg shadow-xl text-base sm:text-lg md:text-xl lg:text-2xl w-full sm:max-w-md lg:max-w-lg">
+                {item.text}
+            </p>
+            <img
+                src={item.image}
+                alt={`Step ${index + 1}`}
+                className="object-cover rounded-lg w-full sm:w-40 md:w-60 lg:w-80 max-h-56 sm:max-h-60 lg:max-h-80"
+            />
+        </div>
+    );
 
     return (
         <>
             <div
-                className="min-h-[750px] bg-cover"
+                className="min-h-[750px] bg-no-repeat bg-cover bg-center md:bg-auto lg:min-h-screen"
                 style={{ backgroundImage: `url(${homeImage})` }}
             >
                 <div className="flex flex-col mt-32">
