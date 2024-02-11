@@ -25,7 +25,7 @@ export default function Home() {
     return (
         <>
             <div
-                className="min-h-[750px] bg-no-repeat bg-cover bg-center md:bg-auto lg:min-h-screen"
+                className="min-h-[650px] bg-no-repeat bg-cover bg-center md:bg-auto lg:min-h-screen"
                 style={{ backgroundImage: `url(${homeImage})` }}
             >
                 <div className="flex flex-col mt-32">
