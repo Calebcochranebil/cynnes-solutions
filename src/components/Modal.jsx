@@ -6,7 +6,7 @@ function Modal({ isOpen, onClose }) {
     if (!isOpen) return null;
 
     return (
-        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center px-4">
+        <div className="fixed inset-0 bg-black bg-opacity-60 flex justify-center items-center px-4 z-10">
             <div className="bg-whitesmoke dark:bg-gray-800 p-6 md:p-10 rounded-lg shadow-2xl space-y-6 max-w-lg w-full">
                 <h2 className="text-2xl md:text-3xl font-bold text-gray-800 dark:text-white">
                     Service Area Notice
