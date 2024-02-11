@@ -17,7 +17,7 @@ function App() {
 
     return (
         <Router>
-            <div className="flex flex-col h-screen bg-whitesmoke">
+            <div className="flex flex-col h-screen bg-white">
                 <NavBar />
                 <Modal isOpen={isModalOpen} onClose={handleCloseModal} />
                 <Routes>
