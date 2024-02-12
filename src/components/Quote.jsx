@@ -104,14 +104,9 @@ export default function Quote() {
                             alt="Visual representation"
                             className="w-48 h-48 rounded-full mx-auto" // Center image
                         />
-                        <p className="mt-4">
-                            Click the image to be redirected to measure your
-                            driveway:
-                            <br />
-                            Once you have been redirected, please watch the
-                            video below
-                            <br />
-                            on how to get the sq/ft of your driveway.
+                        <p className="mt-4 mb-4">
+                            Please watch the video below on how to get the sq/ft of your driveway. Click the image above to be redirected to measure your
+                            driveway. Once you have the sq/ft, enter it in the input field below and click &quot;Get Quote&quot;.
                         </p>
                     </a>
                     {/* Video content */}
