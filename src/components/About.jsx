@@ -19,20 +19,24 @@ export default function About() {
         if (!paragraph) return;
 
         const words = paragraph.querySelectorAll("span");
-        words.forEach((word, wordIndex) => {
+        let delay = 0; // Initial delay before starting the animation
+        const wordAnimationDuration = 300; // Reduced duration for each word's animation
+
+        words.forEach((word) => {
+            // Highlight each word one at a time
             setTimeout(() => {
                 word.style.setProperty("color", "orange");
-                setTimeout(
-                    () => {
-                        word.style.removeProperty("color");
-                    },
-                    500 + wordIndex * 100,
-                );
-            }, wordIndex * 100);
+                setTimeout(() => {
+                    word.style.removeProperty("color");
+                }, wordAnimationDuration); // Keep the word highlighted for the duration
+            }, delay);
+
+            delay += wordAnimationDuration + 50; // Reduced increment delay for the next word
         });
 
         // Calculate total animation time for current paragraph
-        const totalAnimationTime = words.length * 200 + 1000;
+        // Adjusted to account for the new delay between words
+        const totalAnimationTime = delay + 1000;
 
         // Wait for the current paragraph to finish animating before starting the next
         setTimeout(() => {
@@ -55,7 +59,7 @@ export default function About() {
             {text.split(" ").map((word, wIndex) => {
                 const key = `p-${pIndex}-w-${wIndex}-${word.replace(/[^a-zA-Z0-9]/g, "")}`;
                 return (
-                    <span key={key} style={{ transition: "color 0.5s ease" }}>
+                    <span key={key} style={{ transition: "color 0.1s ease" }}>
                         {word}{" "}
                     </span>
                 );

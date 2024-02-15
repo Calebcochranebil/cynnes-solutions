@@ -82,13 +82,13 @@ export default function Quote() {
     return (
         <div className="container mx-auto px-4">
             {/* Heading */}
-            <h1 className="text-2xl font-bold text-center my-4">
+            <h1 className="hidden md:block text-2xl font-bold text-center my-4">
                 TWO WAYS TO GET INITIAL QUOTE
             </h1>
 
             <div className="flex flex-col md:flex-row items-center pt-8">
                 {/* Left Side Content */}
-                <div className="flex flex-col items-center justify-center md:w-1/2 flex-grow">
+                <div className="hidden md:flex flex-col items-center justify-center md:w-1/2 flex-grow">
                     <h2 className="text-xl font-bold my-4 text-center">
                         DO IT YOURSELF
                     </h2>
@@ -104,9 +104,12 @@ export default function Quote() {
                             alt="Visual representation"
                             className="w-48 h-48 rounded-full mx-auto" // Center image
                         />
-                        <p className="mt-4 mb-4">
-                            Please watch the video below on how to get the sq/ft of your driveway. Click the image above to be redirected to measure your
-                            driveway. Once you have the sq/ft, enter it in the input field below and click &quot;Get Quote&quot;.
+                        <p className="mt-4 mb-4 pl-12 pr-12">
+                            Please watch the video below on how to get the sq/ft
+                            of your driveway. Click the image above to be
+                            redirected to measure your driveway. Once you have
+                            the sq/ft, enter it in the input field below and
+                            click &quot;Get Quote&quot;.
                         </p>
                     </a>
                     {/* Video content */}

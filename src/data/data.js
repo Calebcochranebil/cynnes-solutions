@@ -7,7 +7,7 @@ const data = [
     {
         id: 1,
         image: freeQuote,
-        text: "Get a quote by visiting our quote page. Choose the 'Do-It-Yourself' option for instant estimates or provide your details for a full-service quote within 24-48 hours. Proceed as you wish afterwards.",
+        text: "Get a quote by visiting our quote page. A full-service quote will be provided within 24-48 hours. You will be asked to fill out a form for contact information if you choose to proceed.",
     },
     {
         id: 2,
