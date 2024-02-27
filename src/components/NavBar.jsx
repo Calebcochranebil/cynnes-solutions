@@ -12,7 +12,7 @@ export default function NavBar() {
                 <Link to="/" className="flex-none">
                     <img
                         src={logo}
-                        alt="Cynnes Solutions Logo"
+                        alt="Creative Warmth Logo"
                         className="h-24 md:pl-6 lg:pl-8 "
                     />
                 </Link>
